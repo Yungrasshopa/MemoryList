@@ -12,10 +12,9 @@ namespace MemoryList
         private int _length;
         public int Length
         {
-            get => _list.Count;
-            set
+            get
             {
-                _length = value;
+                return _length;
             }
         }
         

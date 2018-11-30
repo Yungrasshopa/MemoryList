@@ -6,7 +6,7 @@ using Xunit;
 namespace MyMemoryListTest
 {
     public class MyMemoryListTest<T> where T: new()
-    {
+    { 
         [Theory]
         [InlineData (new int(), 1)]
         public void AddingElementShouldIncreaseLength(int item, int expected)
@@ -24,7 +24,7 @@ namespace MyMemoryListTest
         }
 
         [Theory]
-        [InlineData(new char[] { 's', '4', 'r' }, 's', 3)]
+        [InlineData(new char[] { 's', '4', 'r' }, 's', 2)]
         public void RemovingElementShouldDecreaseLength(char[] list, char item, int expected)
         {
             // arrange
