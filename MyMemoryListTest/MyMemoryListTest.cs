@@ -59,7 +59,7 @@ namespace MyMemoryListTest
             list.Remove(item);
 
             // act
-            bool contained = list.Contained(item);
+            bool contained = list.Contained(list, item);
 
             //assert
             Assert.Equal(expected, contained);
