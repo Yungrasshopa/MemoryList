@@ -7,12 +7,6 @@ namespace MyMemoryListTest
 {
     public class MyMemoryListTest<T> where T: new()
     {
-        [Fact]
-        public void Test()
-        {
-            var sut = new MyMemoryList();
-        }
-
         [Theory]
         [InlineData (new int(), 1)]
         public void AddingElementShouldIncreaseLength(int item, int expected)
@@ -41,8 +35,8 @@ namespace MyMemoryListTest
             }
 
             // act
-            list.Remove(item);
-            int actual = list.Length;
+            memoryList.Remove(item);
+            int actual = memoryList.Length;
 
             // assert
             Assert.Equal(expected, actual);
@@ -53,13 +47,17 @@ namespace MyMemoryListTest
         [InlineData (new int[] { 7, 15, 8, 69, 42 }, 7, true)]
         [InlineData (new int[] { 10 }, 10, true)]
         [InlineData (new int[] { 0, 8, 69, 42 }, 7, true)]
-        public void WasThisHereBefore(int[] list, T item, bool expected)
+        public void WasThisHereBefore(int[] list, int item, bool expected)
         {
             // arrange
-            list.Remove(item);
+            MyMemoryList<int> memoryList = new MyMemoryList<int>();
+            foreach (var element in list)
+            {
+                memoryList.Add(element);
+            }
 
             // act
-            bool contained = list.Contained(list, item);
+            bool contained = memoryList.Contained(item);
 
             //assert
             Assert.Equal(expected, contained);
