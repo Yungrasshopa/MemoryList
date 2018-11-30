@@ -4,5 +4,6 @@ namespace MemoryList
 {
     public class MyMemoryList
     {
+
     }
 }
