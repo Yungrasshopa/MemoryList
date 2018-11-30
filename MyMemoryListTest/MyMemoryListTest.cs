@@ -5,7 +5,7 @@ using Xunit;
 
 namespace MyMemoryListTest
 {
-    public class MyMemoryListTest<T> where T: new()
+    public class MyMemoryListTest
     { 
         [Theory]
         [InlineData (new int(), 1)]
