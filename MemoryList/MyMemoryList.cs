@@ -8,13 +8,12 @@ namespace MemoryList
         private List<T> _list = new List<T>();
 
         private List<T> _oldList = new List<T>();
-
-        private int _length;
+        
         public int Length
         {
             get
             {
-                return _length;
+                return _list.Count;
             }
         }
         

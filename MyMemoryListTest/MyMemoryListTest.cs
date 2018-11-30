@@ -46,7 +46,7 @@ namespace MyMemoryListTest
         [Theory]
         [InlineData (new int[] { 7, 15, 8, 69, 42 }, 7, true)]
         [InlineData (new int[] { 10 }, 10, true)]
-        [InlineData (new int[] { 0, 8, 69, 42 }, 7, true)]
+        [InlineData (new int[] { 0, 8, 69, 42 }, 7, false)]
         public void WasThisHereBefore(int[] list, int item, bool expected)
         {
             // arrange
