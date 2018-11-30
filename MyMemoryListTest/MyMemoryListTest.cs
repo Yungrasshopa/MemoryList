@@ -15,10 +15,10 @@ namespace MyMemoryListTest
 
         [Theory]
         [InlineData (new int(), 1)]
-        public void AddingElementShouldIncreaseLength(T item, int expected)
+        public void AddingElementShouldIncreaseLength(int item, int expected)
         {
             // arrange
-            var list = new MyMemoryList();
+            var list = new MyMemoryList<int>();
 
             // act
             list.Add(item);
@@ -31,10 +31,10 @@ namespace MyMemoryListTest
 
         [Theory]
         [InlineData(new char[] { 's', '4', 'r' }, 's', 3)]
-        public void RemovingElementShouldDecreaseLength(char[] list, T item, int expected)
+        public void RemovingElementShouldDecreaseLength(char[] list, char item, int expected)
         {
             // arrange
-            var memoryList = new MyMemoryList();
+            var memoryList = new MyMemoryList<char>();
             foreach (var element in list)
             {
                 memoryList.Add(element);
