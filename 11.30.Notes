@@ -1,0 +1,9 @@
+Paired programming
+	- Memory list
+		- Keeps track of everything that has every been in the list
+		- Method that checks if an element has ever been in the list
+		- Use second list that keeps a copy of everything
+			- Could use snapshots to manage previous items
+	- Write tests to implement
+	- Include Comments
+		
